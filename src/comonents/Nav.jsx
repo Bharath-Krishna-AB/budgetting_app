@@ -1,5 +1,5 @@
 //rrd imports
-import { NavLink } from 'react-router-dom'
+import { Form, NavLink } from 'react-router-dom'
 
 //Assets
 import logomark from '../assets/logomark.svg'
@@ -12,6 +12,15 @@ function Nav({userName}) {
             <img src={logomark} alt="" height={30} />
             <span>HomeBudget</span>
         </NavLink>
+        {
+            userName && (
+                <Form method='post' action='/logout'>
+                    <button type='submit' className='btn btn--warning'>
+                        <span>Delete User</span>
+                    </button>
+                </Form>
+            )
+        }
     </nav>
   )
 }
