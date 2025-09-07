@@ -4,6 +4,7 @@ import { useLoaderData, } from 'react-router-dom'
 
 //helper function
 import { fetchData } from '../helpers'
+import Intro from '../comonents/Intro'
 
 //loader 
 export function dashboardLoader() {
@@ -15,10 +16,9 @@ export function dashboardLoader() {
 const Dashboard = () =>{
     const {userName} = useLoaderData()
   return (
-    <div>
-        <h1>{userName}</h1>
-        Dashboard
-    </div>
+    <>
+        {userName ? (<p>{userName}</p>) : (<Intro />)}
+    </>
   )
 }
 
