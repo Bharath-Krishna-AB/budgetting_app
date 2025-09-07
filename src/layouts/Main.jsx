@@ -8,7 +8,7 @@ import { fetchData } from '../helpers'
 //assets
 
 import wave from '../assets/wave.svg'
-import Nav from '../comonents/NAv'
+import Nav from '../components/NAv'
 
 
 //loader 
