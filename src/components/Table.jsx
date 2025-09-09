@@ -1,4 +1,5 @@
 import React from 'react'
+import ExpenseItem from './ExpenseItem'
 
 const Table = ({expenses}) => {
   return (
@@ -7,7 +8,7 @@ const Table = ({expenses}) => {
             <thead>
                 <tr>
                     {
-                        ["Name", "Amount", "Date"].mapp((i, index) =>{
+                        ["Name", "Amount", "Date"].map((i, index) =>{
                             <th key={index}>{i}</th>
                         })
                     }
@@ -18,6 +19,7 @@ const Table = ({expenses}) => {
                     expenses.map((expense) => (
                         <tr key={expense.id}>
                             {expense.name}
+                            <ExpenseItem expense={expense}/>
                         </tr>
                     ))
                 }
