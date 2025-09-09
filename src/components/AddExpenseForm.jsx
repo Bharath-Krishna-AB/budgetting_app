@@ -59,10 +59,10 @@ const AddExpenseForm = ({budgets}) => {
                 <button type='submit' className='btn btn--dark' disabled={isSubmitting}>
                     {
                         isSubmitting ? (
-                            <span>Submiting budget</span>
+                            <span>Submiting Expense</span>
                         ) : (
                             <>
-                                <span>Create budget</span>
+                                <span>Add Expenses</span>
                                 <PlusCircleIcon width={20}/>
                             </>
                          )
